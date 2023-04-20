@@ -1,11 +1,11 @@
-import { Link, useNavigate , useParams, useLocation } from 'react-router-dom'
+import { Link, useNavigate , useParams } from 'react-router-dom'
 import PRODUCTS from '../data.js'
 
 const SingleProduct = () => {
 
   const navigate = useNavigate();
   const { productId } = useParams();
-  const { pathname } = useLocation();
+  
 
   // get product
   const singleProduct = PRODUCTS.find(product => product.id === parseInt(productId))
@@ -14,7 +14,7 @@ const SingleProduct = () => {
 
   // console.log(typeof(productId))
 
-  const { id, name, price, image, details } = singleProduct
+  const {  name, price, image, details } = singleProduct
 
    console.log("product id ", productId)
    console.log("product ", singleProduct)

@@ -7,7 +7,7 @@ function Posts() {
   const [loader, setLoader] = useState(true);
   useEffect(() => {
     fetchPosts();
-    console.log(posts);
+    
   });
   async function fetchPosts() {
     await fetch("https://jsonplaceholder.typicode.com/posts")
